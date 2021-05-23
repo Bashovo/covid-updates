@@ -35,8 +35,7 @@ class _CountryDetailsScreenState extends State<CountryDetailsScreen> {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return Center(child: CircularProgressIndicator());
                 }
-                if (snapshot.data.totalCases == null ||
-                    snapshot.data.totalDeaths == null) {
+                if (snapshot.data == null) {
                   return Padding(
                     padding: const EdgeInsets.only(top: 18.0),
                     child: Align(
